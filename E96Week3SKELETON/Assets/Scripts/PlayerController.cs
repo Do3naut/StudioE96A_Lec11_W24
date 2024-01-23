@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // Component references
     // TODO: create variable to store rigidbody of player (2D)
+    // TODO: create variable storing the Animator
 
 
     [SerializeField] float speed = 5f;
@@ -24,14 +25,15 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // TODO: Get references to the rigidbody attached to the current GameObject
+        // TODO: Get references to the rigidbody and animator attached to the current GameObject
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move(direction);
+        // TODO: Pass in the proper direction that the player should move in
+        Move(0);
 
         // TODO: check conditions needed to flip player, and if so, flip player
 
@@ -59,32 +61,15 @@ public class PlayerController : MonoBehaviour
     private void Move(float x)
     {
         // TODO: change x velocity of player
+
+        // TODO: Here, we can handle animation transitioning logic
     }
-
-    //commonly used function but not used in this case
-    // void OnCollisionEnter(Collision collision)
-    // {
-
-    // }
-
-    // void OnCollisionStay(Collision collision)
-    // {
-    //     //check if angle between normal vector of object of contact and up vector is less than 45 degrees
-    //     //AKA if-statement is true if player is touching another object that is 0 to 45 degrees slope
-    //     if (Vector3.Angle(collision.GetContact(0).normal, Vector3.up) < 45f)
-    //         isGrounded = true;
-    //     else
-    //         isGrounded = false;
-    // }
-
-    // void OnCollisionExit(Collision collision)
-    // {
-    //     isGrounded = false;
-    // }
 
     private void Flip()
     {
         // TODO: flip local scale of player and change global variable that stores which direction player is facing
 
     }
+
+    // TODO: Week 3's assignment needs a couple of extra functions here...
 }
